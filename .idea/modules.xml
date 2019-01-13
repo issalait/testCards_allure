@@ -4,9 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/1_main.iml" filepath="$PROJECT_DIR$/.idea/modules/1_main.iml" group="1" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/1_test.iml" filepath="$PROJECT_DIR$/.idea/modules/1_test.iml" group="1" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ea.iml" filepath="$PROJECT_DIR$/.idea/modules/ea.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ea_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ea_main.iml" group="ea" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ea_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ea_test.iml" group="ea" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/testCards_allure.iml" filepath="$PROJECT_DIR$/.idea/modules/testCards_allure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/testCards_allure_main.iml" filepath="$PROJECT_DIR$/.idea/modules/testCards_allure_main.iml" group="testCards_allure" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/testCards_allure_test.iml" filepath="$PROJECT_DIR$/.idea/modules/testCards_allure_test.iml" group="testCards_allure" />
     </modules>
   </component>
 </project>
