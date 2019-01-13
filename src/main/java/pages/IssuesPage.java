@@ -30,6 +30,12 @@ public class IssuesPage {
     @FindBy(xpath = "//label[.='High']")
     public SelenideElement IssuePriorityHigh;
 
+    @FindBy(xpath = "//label[.='Low']")
+    public SelenideElement IssuePriorityLow;
+
+    @FindBy(xpath = "//label[.='Normal']")
+    public SelenideElement IssuePriorityNormal;
+
     @FindBy(name = "commit")
     public SelenideElement issueSaveBtn;
 
@@ -61,14 +67,29 @@ public class IssuesPage {
     }
 
     @Step
-    public void addNewIssue(String issueName, String issueDesc){
+    public void setIssuePriority(String priority){
+        IssuePrioritySelector.click();
+        switch (priority) {
+            case "Low":
+                IssuePriorityLow.click();
+                break;
+            case "Normal":
+                IssuePriorityNormal.click();
+                break;
+            case "High":
+                IssuePriorityHigh.click();
+                break;
+        }
+    }
+
+    @Step
+    public void addNewIssue(String issueName, String issueDesc, String issuePriority){
         issueSummary.click();
         issueSummary.sendKeys(issueName);
-
         issueDescription.click();
         issueDescription.sendKeys(issueDesc);
         setIssueTypeBug();
-        setIssuePriorityHigh();
+        setIssuePriority(issuePriority);
         issueSaveBtn.click();
     }
 

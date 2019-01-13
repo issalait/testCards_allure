@@ -20,8 +20,7 @@ public class FirstTests {
         Configuration.browser = "chrome";
         //  Configuration.browserSize="1600x1000";
     }
-
-
+/*
     @Test
     public void loginAsRegisteredUser()   {
 
@@ -43,10 +42,10 @@ public class FirstTests {
         projectsPage.checkProjectsPage();
 
     }
-
+*/
     @Test
     public void createCard(){
-        Card issue = new Card("test2","test description");
+        Card issue = new Card("test2","test description", "Low");
 
         LoginPage loginPage = open("https://app.geteasyqa.com/users/sign_in",LoginPage.class);
         loginPage.enterLogin("testuniverse@yandex.ru");
@@ -60,7 +59,7 @@ public class FirstTests {
         IssuesPage issuesPage = projectDashboardPage.openIssues();
         issuesPage.checkIssuesPage();
         issuesPage.clikcAddNewIssue();
-        issuesPage.addNewIssue(issue.getCardName(), issue.getCardDescription());
+        issuesPage.addNewIssue(issue.getCardName(), issue.getCardDescription(), issue.getCardPriority());
         issuesPage.checkIssueAdded(issue.getCardName());
     }
 
